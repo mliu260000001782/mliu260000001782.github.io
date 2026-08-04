@@ -1,0 +1,248 @@
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+
+:root {
+  --bg: #f7f7f7;
+  --panel: #ffffff;
+  --text: #111111;
+  --muted: #5b5b5b;
+  --border: #d8d8d8;
+  --soft: #f2f2f2;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+  padding: 24px;
+}
+
+body > main,
+.page-content {
+  display: grid;
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-footer {
+  max-width: 960px;
+  margin: 20px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-header,
+.site-footer,
+.hero,
+.card,
+.sidebar {
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+/* Header: stacked on mobile for a simple layout */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  max-width: 960px;
+  margin: 0 auto 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 2px;
+}
+
+.nav-links a[aria-current="page"] {
+  border-bottom-width: 2px;
+}
+
+.eyebrow,
+.section-label,
+.card-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.tagline {
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.hero {
+  display: grid;
+  gap: 16px;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid var(--text);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Section heading keeps the page easy to scan */
+.section-heading {
+  display: grid;
+  gap: 6px;
+}
+
+.card-section,
+.card {
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--soft);
+}
+
+.sidebar {
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.sidebar-block {
+  margin-top: 18px;
+}
+
+.sidebar-block h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.sidebar-block ul {
+  padding-left: 20px;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 18px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.content-stack {
+  display: grid;
+  gap: 20px;
+}
+
+.card h2,
+.card-section h2,
+.site-header h1,
+.sidebar h2,
+.hero h2 {
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.card p,
+.card-section p,
+.tagline {
+  margin-top: 10px;
+}
+
+.card ul {
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+.contact-list {
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+.contact-list li + li {
+  margin-top: 6px;
+}
+
+.card li + li {
+  margin-top: 6px;
+}
+
+/* ==========================================
+   WIDER SCREENS
+   ========================================== */
+
+@media (min-width: 600px) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 20px;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .content-stack {
+    align-content: start;
+  }
+
+  .site-header,
+  .site-footer,
+  body > main,
+  .page-content {
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

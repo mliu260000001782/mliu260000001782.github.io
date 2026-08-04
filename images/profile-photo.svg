@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title>Profile photo placeholder</title>
+  <desc>Simple black and white placeholder image for a student portfolio profile photo.</desc>
+  <rect width="400" height="400" fill="#ffffff"/>
+  <circle cx="200" cy="142" r="62" fill="none" stroke="#111111" stroke-width="10"/>
+  <path d="M102 328c18-62 63-98 98-98s80 36 98 98" fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="200" cy="200" r="156" fill="none" stroke="#dddddd" stroke-width="2" stroke-dasharray="10 10"/>
+  <text x="200" y="372" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#111111">Your Photo</text>
+</svg>
