@@ -1,0 +1,323 @@
+/* ==========================================
+   STYLE SHEET FOR UIC DAVAO 
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+/* ==========================================
+    HEADER & NAVIGATION 
+   ========================================== */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #DE6F7E;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;                  
+    text-decoration: none;      
+}
+
+.logo-img {
+    height: 50px;               
+    width: auto;                
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #BE4D5D;
+}
+
+.logo-text .highlight {
+    color: #A8414D;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #BE4D5D;
+}
+
+.nav-link.active {
+    color: #BE4D5D;
+    border-bottom: 2px solid #BE4D5D;
+}
+
+/* ==========================================
+   HERO SHOWCASE
+   ========================================== */
+.hero-section {
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    color: #BE4D5D;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #666666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   PILLARS GRID 
+   ========================================== */
+.pillars-section {
+    padding: 60px 20px;
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #BE4D5D;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pillar-card {
+    background-color: #FFF0F2;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pillar-card:hover {
+    border-color: #DE6F7E;
+}
+
+.card-title {
+    color: #BE4D5D;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* ==========================================
+   PROGRAM OFFERINGS 
+   ========================================== */
+.table-section {
+    padding: 60px 20px;
+}
+
+.table-wrapper {
+    background-color: #FFF0F2;
+    padding: 4px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.specs-table th {
+    background-color: #BE4D5D;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.specs-table td {
+    padding: 20px;
+    border-bottom: 1px solid #FFF0F2;
+    color: #444444;
+    vertical-align: top;
+}
+
+.specs-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.bold-text {
+    font-weight: 700;
+    color: #BE4D5D;
+    width: 25%;
+}
+
+/* ==========================================
+   ADMISSIONS FORM
+   ========================================== */
+.form-section {
+    padding: 60px 20px;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFF0F2;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.form-wrapper .section-title {
+    margin-bottom: 30px;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #BE4D5D;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DE6F7E;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 0.95rem;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #A8414D;
+    box-shadow: 0 0 0 3px rgba(168, 65, 77, 0.15);
+}
+
+.btn {
+    background-color: #BE4D5D;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #A8414D;
+}
+
+/* ==========================================
+   FOOTER SYSTEM
+   ========================================== */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #FFF0F2;
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+/* ==========================================
+   RESPONSIVE BUTTONS
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .specs-table th, 
+    .specs-table td {
+        padding: 12px;
+    }
+    
+    .bold-text {
+        width: auto;
+    }
+
+    .form-wrapper {
+        padding: 25px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
