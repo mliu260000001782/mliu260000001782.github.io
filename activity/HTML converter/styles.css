@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef7ff;
+    color: #183b56;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9eaf7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #176fb3;
+}
+
+.nav-subtitle {
+    font-size: 14px;
+    color: #6b8192;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #12344d;
+}
+
+.description {
+    text-align: center;
+    color: #647b8c;
+    margin-bottom: 35px;
+}
+
+#container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.container {
+    background-color: white;
+    border: 1px solid #dcecf8;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 0;
+    box-shadow: 0 5px 18px rgba(23, 111, 179, 0.10);
+}
+
+.container h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #176fb3;
+}
+
+#markdown-input {
+    width: 100%;
+    height: 300px;
+    resize: vertical;
+    padding: 14px;
+    border: 1px solid #c9dce9;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fafdff;
+    color: #183b56;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+#markdown-input:focus {
+    border-color: #176fb3;
+}
+
+#html-output,
+#preview {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    padding: 14px;
+    border: 1px solid #c9dce9;
+    border-radius: 8px;
+    background-color: #fafdff;
+}
+
+#html-output {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+#preview {
+    line-height: 1.6;
+}
+
+#preview h1,
+#preview h2,
+#preview h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+#preview a {
+    color: #176fb3;
+}
+
+#preview blockquote {
+    border-left: 4px solid #176fb3;
+    padding-left: 12px;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #718798;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    #container {
+        flex-direction: column;
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-subtitle {
+        display: none;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    main h1 {
+        font-size: 26px;
+    }
+
+    #markdown-input,
+    #html-output,
+    #preview {
+        height: 250px;
+    }
+}
